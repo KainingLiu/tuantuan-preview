@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>团团 · 最新 3D 模型</title>
+  <meta name="description" content="团团桌面机器人：最新装配模型、内部布局与拆解预览。">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+  {"imports": {"three": "./vendor/three.module.js", "three/addons/": "./vendor/"}}
+  </script>
+</head>
+<body>
+  <main class="viewer">
+    <header class="topbar">
+      <div class="identity">
+        <span class="mark" aria-hidden="true"><span></span><span></span></span>
+        <div><h1>团团</h1><p id="model-version">桌面机器人 · 正在读取版本</p></div>
+      </div>
+      <div class="project-links"><span class="dimension" id="dimension"></span><a href="https://github.com/KainingLiu/tuantuan" target="_blank" rel="noopener">GitHub ↗</a></div>
+    </header>
+
+    <section class="model-summary" aria-label="模型版本与状态">
+      <span id="model-summary">正在读取模型信息…</span>
+      <details>
+        <summary>模型说明</summary>
+        <div class="model-details"><p id="model-updated"></p><p id="model-validation"></p><p>模型用于设计评审，实物配合与功能仍待验证。眼睛为屏幕表情示意。</p><a id="download-model" href="./tuantuan.glb" download="tuantuan.glb">下载当前 3D 模型</a></div>
+      </details>
+    </section>
+
+    <div class="canvas-area" id="canvas-area" aria-label="团团三维装配模型">
+      <div class="loading" id="loading" role="status">装载模型中 <span id="progress">0%</span></div>
+      <div class="error" id="error" role="alert" hidden><span>模型暂时无法加载，请刷新重试。<br>本地查看请通过 HTTP 服务打开此页面。</span></div>
+      <div class="view-label" id="view-label">外观</div>
+      <div class="gesture-hint">拖动旋转 · 滚轮或双指缩放</div>
+    </div>
+
+    <footer class="toolbar">
+      <div class="segmented" role="group" aria-label="模型视图">
+        <button class="active" data-view="exterior" aria-pressed="true">外观</button>
+        <button data-view="interior" aria-pressed="false">内部</button>
+        <button data-view="exploded" aria-pressed="false">拆解</button>
+      </div>
+      <div class="actions">
+        <button id="reset" class="quiet" title="重置视角">重置视角</button>
+      </div>
+    </footer>
+  </main>
+  <noscript>请启用 JavaScript 以查看三维模型。</noscript>
+  <script type="module" src="./viewer.js"></script>
+</body>
+</html>
