@@ -75,7 +75,8 @@ function displacement(object) {
     return new THREE.Vector3(0, 0.045, 0.055);
   }
   if (name === 'Battery_tray') return new THREE.Vector3(0, 0.025, 0);
-  if (name === 'Adafruit_2011_2000mAh') return new THREE.Vector3(0, 0.045, 0);
+  if (name === 'PiSugar_955465_5000mAh' || name === 'Battery_foam_pad') return new THREE.Vector3(-0.10, 0.025, 0);
+  if (name === 'PiSugar_3_Plus') return new THREE.Vector3(-0.10, 0.06, 0);
   if (group === 'linux' || name.startsWith('M2x6_linux_')) return new THREE.Vector3(0.115, 0.055, -0.01);
   if (group === 'electronics' || group === 'power' || name === 'Electronics_rack') return new THREE.Vector3(0, 0.07, 0);
   return new THREE.Vector3();
@@ -120,10 +121,11 @@ async function loadModel() {
     const fit = result.interferences ? `${result.interferences} 组装配干涉待复核` : '静态装配干涉检查通过';
     const eyes = result.smile_eye_blocked_rays === 0 ? '笑眼区域光路采样通过' : '笑眼区域光路待复核';
     const edge = result.display_blocked_rays ? '屏幕边缘在部分角度存在遮挡，尚待实物确认' : '整屏光路采样通过';
-    const linux = result.linux_envelope_interferences === 0 ? '新增 ZERO 3W 安装位占位检查通过；当前采用外接电源，板卡、散热与线束待试装。' : '';
+    const linux = result.linux_envelope_interferences === 0 ? 'ZERO 3W 安装位占位检查通过；仅一处 USB-C 充电口，5000mAh 电池统一供电；散热、线束与电气仍待试装验证。' : '';
     document.getElementById('model-validation').textContent = `打印网格${result.printed_meshes_passed ? '检查通过' : '待修正'}；${fit}；${eyes}；${edge}。${linux}`;
     const modelUrl = `./${metadata.model_file}?sha=${metadata.model_sha256}`;
     document.getElementById('download-model').href = modelUrl;
+    document.getElementById('download-kit').href = `https://github.com/KainingLiu/tuantuan/releases/tag/v${metadata.version}-buildkit`;
     const gltf = await new GLTFLoader().loadAsync(modelUrl, event => {
       if (event.total) progress.textContent = `${Math.round(event.loaded / event.total * 100)}%`;
     });
