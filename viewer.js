@@ -51,6 +51,7 @@ let model;
 let mode = 'exterior';
 const original = new Map();
 const internalNames = new Set(['Upper_shell', 'Face_lens', 'Face_outer_bezel', 'Face_light_baffle', 'Face_blackout_film', 'Touch_cap', 'Touch_cap_tape', 'Touch_copper_electrode']);
+
 function frameMode() {
   if (!model) return;
   const box = new THREE.Box3().setFromObject(model);
@@ -115,7 +116,10 @@ async function loadModel() {
     document.getElementById('model-summary').textContent = `${metadata.status} · ${metadata.parts_count} 个部件 · ${metadata.printed_parts_count} 个打印件`;
     document.getElementById('model-updated').textContent = `更新于 ${new Date(metadata.updated_at).toLocaleString('zh-CN')}`;
     const result = metadata.validation;
-    document.getElementById('model-validation').textContent = `打印网格${result.printed_meshes_passed ? '检查通过' : '待修正'}；${result.interferences} 组装配干涉待复核；显示光路${result.display_blocked_rays ? '待修正' : '采样通过'}。`;
+    const fit = result.interferences ? `${result.interferences} 组装配干涉待复核` : '静态装配干涉检查通过';
+    const eyes = result.smile_eye_blocked_rays === 0 ? '笑眼区域光路采样通过' : '笑眼区域光路待复核';
+    const edge = result.display_blocked_rays ? '屏幕边缘在部分角度存在遮挡，尚待实物确认' : '整屏光路采样通过';
+    document.getElementById('model-validation').textContent = `打印网格${result.printed_meshes_passed ? '检查通过' : '待修正'}；${fit}；${eyes}；${edge}。`;
     const modelUrl = `./${metadata.model_file}?sha=${metadata.model_sha256}`;
     document.getElementById('download-model').href = modelUrl;
     const gltf = await new GLTFLoader().loadAsync(modelUrl, event => {

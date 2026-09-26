@@ -1,10 +1,10 @@
 {
-  "version": "0.4.1",
-  "updated_at": "2026-09-26T12:36:40+00:00",
+  "version": "0.5.0",
+  "updated_at": "2026-09-26T14:01:44+00:00",
   "model_file": "tuantuan.glb",
-  "model_sha256": "ece284789449364e50577f72c0d5b0c56cd3375f978b99ce5b0039590b77cc4a",
+  "model_sha256": "5b072e35ce9f8520f136ddc09a3aeae25c3b7dcfed1995d0d0ab1dfc8e64e5df",
   "dimensions_mm": [
-    140.05,
+    140.07,
     140.06,
     107.83
   ],
@@ -12,26 +12,28 @@
   "printed_parts_count": 11,
   "status": "装配设计 · 待试装",
   "validation": {
-    "interferences": 5,
+    "interferences": 0,
     "printed_meshes_passed": true,
     "camera_blocked_rays": 0,
-    "display_blocked_rays": 225
+    "display_blocked_rays": 36,
+    "smile_eye_blocked_rays": 0,
+    "display_front_blocked_rays": 1
   },
   "source_sha256": {
-    "cad/build_robot.py": "cd0898e987409355e98b67cf7232ebcefb08a6c0e3332ad74d71b51aa7a23b0c",
-    "cad/form_v04.py": "c406898f00640be0bf3f34f30f8f3b6bab26d94010a5224ee8daa3859f2c5e16",
-    "cad/parameters.json": "fd976782e694826715fa11f3dfa2d8737b016d4a59bf45d851bac753fa0ee4b4",
+    "cad/build_robot.py": "d1923fe60acda6096396fa7244ef07d7c92ce9291d4d0725817fd791c02f76fd",
+    "cad/form_v04.py": "71a08d7bde413cdfb0756a18bebefbff975af8db0e537291ba5a9113804e48fa",
+    "cad/parameters.json": "d71ee9f79956aeee318068f6f9d4104145c2662c6be4b690001531b38fa165f0",
     "cad/validate_meshes.py": "b0faba384a6c0140f96c5af1f18b0b4745a98fc6b50cbfe6a979531dc85940e6",
     "cad/preview_metadata.py": "96aebe22884acf89d83c47fcf9e774146e6579322b1ade10fc13800e69419243",
     "cad/sources/manifest.json": "cb71497356355ce8a004a8a57a4994bdd07f717c0278691300a4b51555690758",
-    "cad/render_model.py": "ca90ff2f4554a7d4007a9f2821f20c46fd49f9d5e9753e9c3e7b2930de206f86",
+    "cad/render_model.py": "a5fa68f53d04a0c3683e32f04ac737aeda36307d0d5645eb2e920d041aef21c9",
     "cad/export_web_preview.py": "f63bdd44714d59ae9e831ef2c72a3cfbc2b228da83ae50ee7164693c2079eb80",
-    "cad/check_optical_paths.py": "8b212fbb6b4b25867f754f066126a3b0cba5aaff6da2427a62c4218d60d0f588",
-    "cad/update_preview.py": "44f03867a125c1b6036c8329e89ecd252276bf874a36ecdd0babd360947060cf",
-    "cad/output/assembly_manifest.json": "b23a820a244d909506735950944ab25947239669f06412ca42c636f4e37971c1",
-    "cad/output/build_provenance.json": "0dfa1cfcaa735326f17a1a52409f83df3cd9b07ae67dd0c236de43f1206651f2",
-    "cad/output/validation.json": "98ae971a6c657a6f9b134382a4062ada8ea541df53cd464e1377170cd1072be8",
-    "cad/output/mesh_validation.json": "a9764d21a215d4258040aac348797c20cf7da9d386e049e48a79d9d0a464a9e9",
-    "cad/output/optical_geometry.json": "c8902b249a1e5501a757dd8eb7998dd8e4fdc56d543001d9ea363402238a7133"
+    "cad/check_optical_paths.py": "cabc3e7906c4ebd172088f9011507fab917692a40f5922bb76ba49c572bb3b2c",
+    "cad/update_preview.py": "a2ffb1076c4dd908b23b9a59decdc90901b8c01a8121050027c431889625a92b",
+    "cad/output/assembly_manifest.json": "9d95131dbf255b05b65f74be2796591371098f98f46c7aeaae2967144084acf2",
+    "cad/output/build_provenance.json": "02cd9dad557122ad9fc6d5efc7dc98b1c92bf65f04377dd588f3508e8805e844",
+    "cad/output/validation.json": "e984201dde474adb9fa192575133ff48f65ba6f524131e4c1fa5d57882903d21",
+    "cad/output/mesh_validation.json": "b4b6a52d3577e30486e43cc2150d63fe0811c8f7b6f14fcb3950cefdf66d65e2",
+    "cad/output/optical_geometry.json": "81ffd643c6bddff826f8d2c2da3e6b8ab5f67007cdf41779599f159b5e5655a8"
   }
 }
