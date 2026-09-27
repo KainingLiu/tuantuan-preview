@@ -1,8 +1,8 @@
 {
-  "version": "0.7.0",
-  "updated_at": "2026-09-26T18:00:15+00:00",
+  "version": "0.7.1",
+  "updated_at": "2026-09-27T06:31:57+00:00",
   "model_file": "tuantuan.glb",
-  "model_sha256": "de99fd62fd7a92e41bcf53856185b4082d22beee286227a4a2692b5c2178f2a0",
+  "model_sha256": "6eff29c8bf702bad34c6726a849ab4733e2780ab1a9e55806654ef4891930c38",
   "dimensions_mm": [
     140.07,
     140.07,
@@ -21,9 +21,9 @@
     "display_front_blocked_rays": 2
   },
   "source_sha256": {
-    "cad/build_robot.py": "7ad267d852d7f8c66b8ef7033e5c0a1bd16d19571d6648d2f0e45b24ebe6093e",
+    "cad/build_robot.py": "c0cdedcf8ff76c3a3b472554f88890be4ea2f678a9baf1d8e2ba813dd4776c17",
     "cad/form_v04.py": "71a08d7bde413cdfb0756a18bebefbff975af8db0e537291ba5a9113804e48fa",
-    "cad/parameters.json": "1043370b6a02d713bdb942b677ad6f096a60a4aa880df25703c38feb229f695f",
+    "cad/parameters.json": "d880a5d6601c30c60480f8f01dfde4e5bc1c76e8a4872c61e864fce532577d7f",
     "cad/validate_meshes.py": "b0faba384a6c0140f96c5af1f18b0b4745a98fc6b50cbfe6a979531dc85940e6",
     "cad/preview_metadata.py": "a9a099be4c4c0f9e0824ba30517b18fd18d7130e354b57c1768dcae824d449d6",
     "cad/sources/manifest.json": "cb71497356355ce8a004a8a57a4994bdd07f717c0278691300a4b51555690758",
@@ -34,10 +34,10 @@
     "cad/export_web_preview.py": "f63bdd44714d59ae9e831ef2c72a3cfbc2b228da83ae50ee7164693c2079eb80",
     "cad/check_optical_paths.py": "cabc3e7906c4ebd172088f9011507fab917692a40f5922bb76ba49c572bb3b2c",
     "cad/update_preview.py": "16d3c26c9d8f35c5034838c702ec61130943a58494eacfd6cdf0b19b3718ec2a",
-    "cad/output/assembly_manifest.json": "94fb68effc5048da848814199ac7e1e44552cede83b7c2f781e06d01ad874dd2",
-    "cad/output/build_provenance.json": "0f9bd05611f00b7b759492c031883027019f0bdba1d7512db24701f6ffb76783",
+    "cad/output/assembly_manifest.json": "53650415ce777e82682b36f110afe96e52f82c34c9adb60dbc5cc3369a5091a4",
+    "cad/output/build_provenance.json": "d7d2d8bb2674536edcbe1f822deb37c62b9862031627e4b06f0079451176d138",
     "cad/output/validation.json": "5eb107ec2a8c213b5db1e073cd9867309dd0e20013c14a9be247fe10957f698d",
     "cad/output/mesh_validation.json": "a4238c594e02d3bbc0dd88a348c244767bb6e5ff7d9feb1bc906eb4ae43e4fd4",
-    "cad/output/optical_geometry.json": "f973f126a843b317aea778c420e0430b86785564da0a03667b2cdc4fa6685e3d"
+    "cad/output/optical_geometry.json": "2e0a24a155f6c762c019f23b6da30cdfeab1a32a4455c99e8db71afa108732d3"
   }
 }
